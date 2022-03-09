@@ -1,0 +1,185 @@
+<!-- <div class="container">
+  <h1>Calculator</h1>
+  <div>
+    <label for="num1">a</label>
+    <input id="num1" type="number" class="form-control" [(ngModel)]="num1" />
+    <br />
+    <label for="num2">b</label>
+    <input id="num2" type="number" class="form-control" [(ngModel)]="num2" />
+  </div>
+  <br />
+  <div>
+    <div>
+      <button class="btn btn-primary me-1 btn-lg" (click)="add()">a + b</button>
+      <button class="btn btn-primary me-1 btn-lg" (click)="subtract()">
+        a - b
+      </button>
+      <button class="btn btn-primary me-1 btn-lg" (click)="multiply()">
+        a * b
+      </button>
+    </div>
+    <div class="mt-4">
+      <button class="btn btn-primary me-1 btn-lg" (click)="divide()">
+        a / b
+      </button>
+      <button class="btn btn-primary me-1 btn-lg" (click)="power()">
+        a ^ b
+      </button>
+      <button class="btn btn-primary me-1 btn-lg" (click)="root()">√a</button>
+    </div>
+  </div>
+  <br />
+  <h2>Result: {{result}}</h2>
+</div> -->
+<div class="container">
+  <h1>Calculator</h1>
+  <textarea disabled class="textarea" [value]="str"></textarea>
+  <div>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="^"
+    >
+      a^b
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="sqrt"
+    >
+      √a
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="/"
+    >
+      /
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="clear"
+    >
+      C
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="7"
+    >
+      7
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="8"
+    >
+      8
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="9"
+    >
+      9
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="x"
+    >
+      x
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="4"
+    >
+      4
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="5"
+    >
+      5
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="6"
+    >
+      6
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="-"
+    >
+      -
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="1"
+    >
+      1
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="2"
+    >
+      2
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="3"
+    >
+      3
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="+"
+    >
+      +
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="0"
+    >
+      0
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg"
+      (click)="addToStr($event)"
+      value="."
+    >
+      .
+    </button>
+    <button
+      class="btn btn-primary me-1 btn-lg btn-equal"
+      (click)="addToStr($event)"
+      value="="
+    >
+      =
+    </button>
+  </div>
+  <br />
+</div>
